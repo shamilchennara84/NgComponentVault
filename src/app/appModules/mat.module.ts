@@ -7,6 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 const material = [
   MatToolbarModule,
@@ -16,7 +17,8 @@ const material = [
   MatListModule,
   MatDividerModule,
   MatGridListModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatButtonToggleModule
 ];
 
 @NgModule({

@@ -1,0 +1,84 @@
+<div class="container mx-auto p-4">
+  <div>
+    <h3 class="my-2 text-lg font-medium text-slate-600">Toggle Buttons</h3>
+  </div>
+
+  <mat-divider></mat-divider>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+    <!-- ========================================================================== -->
+    <div class="element-card">
+      <h1 class="text-base font-medium text-slate-700 my-4">Ex.01 : Single Toggle Button</h1>
+
+      <mat-button-toggle #myToggle (change)="onSingleButtonToggle($event)">
+        {{ myToggle.checked ? "Active" : "Inactive" }}
+      </mat-button-toggle>
+      <br>
+      <br>
+      <p class="font-semibold">
+        {{ myToggle.checked }}
+      </p>
+
+
+    </div>
+
+    <!-- ========================================================================== -->
+
+    <div class="element-card">
+      <h1 class="text-base font-medium text-slate-700 my-4">Ex.02 : Button Toggle Group</h1>
+
+      <!-- Wrap the mat-button-toggle-group in a form tag -->
+      <form>
+        <mat-button-toggle-group [(ngModel)]="fontStyle" name="fontStyle" aria-label="Select font style">
+          <!-- <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style"></mat-button-toggle-group>  Use for reactive forms-->
+          <mat-button-toggle value="left">
+            <mat-icon>format_align_left</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="center">
+            <mat-icon>format_align_center</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="right">
+            <mat-icon>format_align_right</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="justify">
+            <mat-icon>format_align_justify</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </form>
+      <br />
+      <p class="font-semibold">Chosen value is
+        {{ fontStyle }}
+      </p>
+      <br />
+
+      <p [ngStyle]="{ 'text-align': fontStyle }">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged
+      </p>
+    </div>
+
+    <!-- ========================================================================== -->
+    <div class="element-card">
+      <h1 class="text-base font-medium text-slate-700 my-4">Ex.03:Multiple Selection Toggle Group</h1>
+
+ <h3>Single selection</h3>
+ <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color" #singleSelect = "matButtonToggleGroup">
+   <mat-button-toggle value="red">Red</mat-button-toggle>
+   <mat-button-toggle value="green">Green</mat-button-toggle>
+   <mat-button-toggle value="blue">Blue</mat-button-toggle>
+ </mat-button-toggle-group>
+ <p class="font-semibold">{{singleSelect.value}}</p>
+
+ <h3>Multiple selection</h3>
+ <mat-button-toggle-group name="ingredients" aria-label="Ingredients" multiple #multipleSelect="matButtonToggleGroup">
+   <mat-button-toggle value="flour">Flour</mat-button-toggle>
+   <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
+   <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+ </mat-button-toggle-group>
+ <p class="font-semibold">{{multipleSelect.value}}</p>
+
+    </div>
+    <!-- ========================================================================== -->
+  </div>
+</div>
