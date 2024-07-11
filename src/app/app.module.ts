@@ -9,9 +9,11 @@ import { MatModule } from './appModules/mat.module';
 import { HeaderComponent } from './includes/header/header.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { MainComponent } from './pages/main/main.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ButtonsComponent } from './pages/buttons/buttons.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, MainComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, MainComponent, NotFoundComponent, ButtonsComponent],
   imports: [BrowserModule, AppRoutingModule, MatModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

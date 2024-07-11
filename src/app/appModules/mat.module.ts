@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const material = [
   MatToolbarModule,
@@ -15,6 +16,7 @@ const material = [
   MatListModule,
   MatDividerModule,
   MatGridListModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({
