@@ -8,7 +8,7 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
 
-    <mat-card class="element-card">
+    <mat-card role="button" class="element-card" [routerLink]="['/buttons']">
       <mat-card-header>
         <mat-icon color="primary">gamepad
         </mat-icon>
@@ -18,13 +18,24 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="element-card">
+    <mat-card role="button" class="element-card" [routerLink]="['/button-toggle']">
       <mat-card-header>
         <mat-icon color="primary">toggle_on</mat-icon>
       </mat-card-header>
-      <mat-card-content >
+      <mat-card-content>
 
         <mat-card-title>Toggle Buttons</mat-card-title>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card role="button" class="element-card" [routerLink]="['/dynamic_theme']">
+      <mat-card-header>
+        <mat-icon color="primary">palette
+        </mat-icon>
+      </mat-card-header>
+      <mat-card-content>
+
+        <mat-card-title>Dynamic Colors</mat-card-title>
       </mat-card-content>
     </mat-card>
 

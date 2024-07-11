@@ -13,9 +13,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ButtonsComponent } from './pages/buttons/buttons.component';
 import { ButtonToggleComponent } from './pages/button-toggle/button-toggle.component';
 import { FormsModule } from '@angular/forms';
+import { DynamicThemeComponent } from './pages/dynamic-theme/dynamic-theme.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, MainComponent, NotFoundComponent, ButtonsComponent, ButtonToggleComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, MainComponent, NotFoundComponent, ButtonsComponent, ButtonToggleComponent, DynamicThemeComponent],
   imports: [BrowserModule, AppRoutingModule, MatModule,FormsModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
